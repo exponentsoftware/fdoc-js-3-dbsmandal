@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convertArrayToObject</title>
+    <script>
+        const students = [
+            ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95],],
+            ['John', ['node', 'CSS', 'JS', 'React'], [85, 80, 85, 80],],
+
+        ]
+
+
+        const convertArrayToObject = (arr) => {
+            let finalArray = [];
+            for (const array of arr) {
+                for (let i = 0; i < array.length; i++) {
+                    var obj3 = {
+                        name: array[0],
+                        skills: array[1],
+                        scores: array[2],
+                    };
+                }
+                finalArray.push(obj3)
+            }
+            return finalArray
+        }
+        console.log(" final array", convertArrayToObject(students))
+
+    </script>
+
+</head>
+
+<body>
+    <h1>convertArrayToObject</h1>
+</body>
+
+</html>
