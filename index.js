@@ -22,6 +22,54 @@ const convertArrayToObject = (arr) => {
 console.log(" final array", convertArrayToObject(students))
 
 
+const newStudent = {
+    name: 'David',
+    age: 25,
+    skills: {
+        frontEnd: [
+            { skill: 'HTML', level: 10 },
+            { skill: 'CSS', level: 8 },
+            { skill: 'JS', level: 8 },
+            { skill: 'React', level: 9 }
+        ],
+        backEnd: [
+            { skill: 'Node',level: 7 },
+            { skill: 'GraphQL', level: 8 },
+        ],
+        dataBase:[
+            { skill: 'MongoDB', level: 7.5 },
+        ],
+        dataScience:['Python', 'R', 'D3.js']
+    }
+}
+
+const addFrontEndSkills = (obj,format, skill, level) => {
+    let addskills = obj.skills.frontEnd
+    let newSkill = { skill: skill, level: level }
+    let skillFormat=obj.skills
+
+    // console.log("first",addskills)
+    // console.log("skill",skill)
+    // console.log("level",level)
+ console.log("skillFormat",skillFormat)
+
+
+    for (let i = 0; i < addskills.length; i++) {
+        // console.log("forloop",addskills[i])
+        if (addskills[i] === skill) {
+            return "this skill set alredy registered"
+        }
+    }
+    addskills.push(newSkill)
+
+    console.log("first",addskills)
+
+    return obj
+
+
+}
+console.log("addFrontEndSkills", addFrontEndSkills(newStudent,'frontEnd', 'bootstrap', 8))
+console.log("addFrontEndSkills", addFrontEndSkills(newStudent, 'frontEnd','bootstrap', 8))
 
 
 
