@@ -70,6 +70,7 @@ const addFrontEndSkills = (obj,format, skill, level) => {
 }
 console.log("addFrontEndSkills", addFrontEndSkills(newStudent,'frontEnd', 'bootstrap', 8))
 console.log("addFrontEndSkills", addFrontEndSkills(newStudent, 'frontEnd','bootstrap', 8))
+console.log(newStudent.skills.frontEnd.length)
 
 
 
